@@ -1,0 +1,107 @@
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #22254b;
+}
+.navbar-default .navbar-nav>li>a{
+    color:white;
+    cursor: pointer
+}
+
+.disabled{
+    display:none;
+}
+
+.enabled{
+    color:white
+}
+h3{
+    margin:0px;
+    font-size:16px;
+}
+.course-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 70px;
+    margin-top: 70px;
+   
+}
+.course img{
+   height: 270px;
+    width:270px;
+    max-width:100%;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  
+    
+}
+
+.course{
+    position: relative;
+    overflow:hidden;
+    padding:0.5rem
+}
+.course-info{
+    display: flex;
+    width: 270px;
+    background-color: #66739a;
+    padding: 10px;
+    min-height: 56px;
+    // to bring item in one line and in center use below two
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.my-badge{
+    padding: 5px;
+    background-color: #22254b;
+    border-radius: 6px;
+}
+
+.red{
+color:red;
+}
+.green{
+color:#afec33;
+}
+.blue{
+    color:#2196f3;
+}
+
+.course-overview{
+//used absolute on child and relative on parent that is .course
+    position: absolute;
+    width: 270px;
+    background-color: white;
+    bottom: 0;
+    color: black;
+    padding: 20px;
+    // note: here pushed it to bottom and in parent made overflow hidden
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    // for overlflow on data
+    overflow:auto;
+    max-height: 100%
+    
+    
+}
+
+.course:hover .course-overview{
+  transform: translateY(0);
+}
+
+.red{
+    color:red;
+    }
+    .green{
+    color:#afec33;
+    }
+    .blue{
+        color:#2196f3;
+    }

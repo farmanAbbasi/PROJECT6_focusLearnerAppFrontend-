@@ -1,0 +1,71 @@
+.container{
+    margin-top:70px
+}
+
+span{
+    color:gray
+}
+
+ 
+
+label {
+    display: block;
+    
+    input, textarea {
+        color:black !important;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 1em;
+    }
+
+    .error{
+        font-size: 12px;
+        color: red;
+    }
+}
+
+.cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.results {
+    margin-top: 50px;
+
+    strong {
+        display: block;
+    }
+    span {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+
+.inner{
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 50% 50%;
+
+    grid-template-areas:
+    "a b";
+    grid-gap: 10px;
+}
+
+.a{
+    grid-area: a;
+    color:white
+}
+.b{
+    grid-area: b;
+    color:white
+
+}

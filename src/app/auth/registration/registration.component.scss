@@ -1,0 +1,88 @@
+label {
+    display: block;
+    
+    input, textarea {
+        display: block;
+        color:black;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0.8em;
+        border-radius: 5px;
+        //background-color: #eee;
+        border:1px solid #eee;
+    }
+
+    .error {
+        margin-top: -20px;
+        background: yellow;
+        padding: .5em;
+        display: inline-block;
+        font-size: .9em;
+        margin-bottom: 20px;
+    }
+
+}
+.danger {
+    margin-top: -20px;
+    background:lightblue;
+    padding: .5em;
+    display: inline-block;
+    font-size: .9em;
+    margin-bottom: 20px;
+}
+
+a:hover{
+
+    text-decoration: none;
+    }
+
+p{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    color:white;
+}
+h1{
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+}
+    
+
+.results {
+    margin-top: 50px;
+
+    strong {
+        display: block;
+    }
+    span {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+
+
+.left{
+grid-column: 1/2;
+
+}
+.right{
+grid-column: 2/3;
+background-color: #021a32;
+// box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+// 		0 10px 10px rgba(0,0,0,0.22);
+}
+.myButton{
+    background-color:#021a32;
+    color:white;
+    border:1px solid white;
+    width: 150px;
+    outline: none
+}
+  
+.alertMe{
+    margin:-5px;
+}

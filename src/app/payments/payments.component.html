@@ -1,0 +1,65 @@
+<div class="container">
+    <h2>Your shipping details:</h2>
+    <h3><span>Email: </span>{{globals.globalEmail}}</h3>
+    <h3><span>Course in cart: </span>{{globals.courseInCart}}</h3>
+    <h3><span>Price: </span>{{globals.coursePrice}} ₹</h3>
+</div>
+
+<div style="    background-color: #66739a66;
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+padding: 20px;">
+    <div>
+        <h2>Checkout</h2>
+    </div>
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit(messageForm.value)">
+        <label>
+            Card Number:
+            <input formControlName="cardNumber" maxlength="16"/>
+            <div *ngIf="submitted && messageForm.controls.cardNumber.errors" class="error">
+                <div *ngIf="messageForm.controls.cardNumber.errors.required">A cardNumber is required</div>
+            </div>
+        </label>
+        <label>
+            Name:
+            <input type="text" formControlName="name" maxlength="30">
+            <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+                <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
+
+            </div>
+        </label>
+        
+        <div class="inner">
+            <span class="a"> <label>
+                    Expiry Date:
+                    <input type="text" formControlName="expiryDate" placeholder="mm/yyyy" maxlength="7">
+                    <div *ngIf="submitted && messageForm.controls.expiryDate.errors" class="error">
+                        <div *ngIf="messageForm.controls.expiryDate.errors.required">An expiryDate is requred</div>
+                    </div>
+
+                </label></span>
+
+            <span class="b">
+                <label>
+                    CVV:
+                    <input type="password" formControlName="cvv" maxlength="3">
+                    <div *ngIf="submitted && messageForm.controls.cvv.errors" class="error">
+                        <div *ngIf="messageForm.controls.cvv.errors.required">Enter a valid CVV</div>
+                    </div>
+
+                </label>
+            </span>
+            <label *ngIf="showOTPBOX">
+                    Enter the OTP:
+                    <input type="password" formControlName="otp" maxlength="6">
+                    <div *ngIf="submitted && messageForm.controls.otp.errors" class="error">
+                        <div *ngIf="messageForm.controls.otp.errors.required">OTP is required</div>
+        
+                    </div>
+                </label>
+        </div>
+
+        <input type="submit" value="Checkout Now" class="cta">
+    </form>
+</div>

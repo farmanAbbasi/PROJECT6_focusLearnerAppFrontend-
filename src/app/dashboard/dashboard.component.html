@@ -1,0 +1,69 @@
+<nav class="navbar navbar-default myNav" style="position:fixed;width:100%;top:0px;background-color: #66739a
+;border:none;border-radius: 0;z-index:1">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div>
+                <a class="navbar-brand" style="color:white;font-size: 18px">focusLearn</a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="logout()">Logout</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-toggle="collapse" data-target="#myNavbar">
+                <li><a (click)="gotoHome()">Home</a></li>
+            </ul>
+
+
+        </div>
+    </div>
+</nav>
+
+
+<div class="course-container" *ngIf="!globals.openPaymentPage">
+    <div class="course" *ngFor="let course of coursesList ; let i =index ">
+    <div class="my-badge" [ngClass]="getClasses2(course.title)" style="position: absolute;
+    z-index: 2;
+    margin: 17px;">Bought</div>
+    <!--  -->
+        <img style="position: relative;"src={{course.thumbnailURL}} alt="{{course.title}}">
+
+        <div class="course-info">
+
+            <h3>{{course.id}}) {{course.title}}</h3>
+            <span class="my-badge" [ngClass]="getClasses(course.price)">{{course.price}} ₹</span>
+        </div>
+        <div class="course-overview">
+            <h3 style="font-weight: bold">Course : {{course.title}}</h3>
+
+            <hr>
+            <span>Price : {{course.price}} ₹</span>
+            <p>Title : {{course.title}}</p>
+            <div style="display:flex;flex-wrap:flex;justify-content: space-between">
+                <div style="display:flex;flex-wrap:flex;justify-content: space-between">
+                    <button style="color:white;background-color: #22254b;border:none; padding:5px;cursor: pointer;"
+                     (click)="buyCourse(course.title,course.price)">Buy</button>
+                </div>
+                <div>
+                    <a href="#">Goto course</a>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</div>
+<div *ngIf="globals.openPaymentPage">
+ <app-payments></app-payments>
+</div>
